@@ -3,9 +3,6 @@ import React from "react";
 function TransactionTable(){
     return (
         <div>
-        <h2>
-            <button>Search your Recent Transaction</button>
-            </h2>
             <table>
                 <thead>
                     <tr>

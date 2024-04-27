@@ -16,6 +16,7 @@ function App() {
     <div className="App">
       <h1>The Royal Bank of Flatiron</h1>
      <TransactionTable transactions={transactions}/>
+     <TransactionForm addTransaction={addTransaction} />
      
     </div>
   );
