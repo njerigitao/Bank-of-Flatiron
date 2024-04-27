@@ -15,6 +15,11 @@ function TransactionTable(){
                     </tr>
                 </thead>
                 <tbody>
+                    {transactions.map((transaction, index)=> (
+                        <tr key={index}>
+                            <td>{transaction.date}</td>
+                        </tr>
+                    ))}
                  <td></td>
                 </tbody>
             </table>
