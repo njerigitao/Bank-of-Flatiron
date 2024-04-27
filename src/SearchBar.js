@@ -5,7 +5,10 @@ function SearchBar({handleSearch}){
     const handleChange = (e) => {
         setSearchTerm (e.target.value);
     };
-    co
+    const handleSubmit = (e)=> {
+        e.preventDefault();
+        handleSearch(searchTerm);
+    }
 }
 
 export default SearchBar;
