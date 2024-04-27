@@ -26,6 +26,7 @@ function TransactionForm({ addTransaction }){
         <div>
             
             <form onSubmit={handleSubmit}>
+
                 <label>Date:</label>
                 <input type="text"
                 name="date"
@@ -48,7 +49,7 @@ function TransactionForm({ addTransaction }){
                 onChange={handleChange} />
                 <button type="submit">Add Transaction</button>
             </form>
-        </div>
+            </div>
      );
 
 }
