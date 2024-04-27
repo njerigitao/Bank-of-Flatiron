@@ -12,7 +12,8 @@ function App() {
   }
   return (
     <div className="App">
-     <TransactionTable />
+      <h1>The Royal Bank of Flatiron</h1>
+     <TransactionTable transactions={transactions}/>
      
     </div>
   );
