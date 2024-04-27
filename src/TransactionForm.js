@@ -6,5 +6,6 @@ function TransactionForm({ addTransaction }){
         description: '',
         category: '',
      }) ;
-     
+
 }
+export default TransactionForm;
