@@ -24,12 +24,17 @@ function TransactionForm({ addTransaction }){
      };
      return (
         <div>
-            <h2>Search your Recent Transaction</h2>
+            
             <form onSubmit={handleSubmit}>
                 <label>Date:</label>
                 <input type="text"
                 name="date"
                 value={formData.date}
+                onChange={handleChange} />
+                <label>Description:</label>
+                <input type="text"
+                name="description"
+                value={formData.description}
                 onChange={handleChange} />
                 <label>Amount:</label>
                 <input type="text"
