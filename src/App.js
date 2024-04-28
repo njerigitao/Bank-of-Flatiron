@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <h1>The Royal Bank of Flatiron</h1>
+      <SearchBar handleSearch={handleSearch} />
+      <TransactionForm addTransaction={addTransaction} />
      <TransactionTable transactions={transactions}/>
-     <TransactionForm addTransaction={addTransaction} />
-     <SearchBar handleSearch={handleSearch} />
      
     </div>
   );
