@@ -13,18 +13,18 @@ function TransactionTable({ transactions}){
                     </tr>
                 </thead>
                 <tbody>
-                    {transactions.map((transaction, index)=> (
+                    {transactions.map(({date, description, category, amount}, index)=> (
                         <tr key={index}>
-                            <td>{transaction.date}</td>
-                            <td>{transaction.description}</td>
-                            <td>{transaction.category}</td>
-                            <td>{transaction.amount}</td>
+                            <td>{date}</td>
+                            <td>{description}</td>
+                            <td>{category}</td>
+                            <td>{amount}</td>
                         </tr>
                     ))}
                  <td></td>
                 </tbody>
             </table>
         </div>
-    )
+    );
 }
 export default TransactionTable;

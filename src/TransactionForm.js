@@ -28,25 +28,13 @@ function TransactionForm({ addTransaction }){
             <form onSubmit={handleSubmit}>
 
                 <label>Date:</label>
-                <input type="text"
-                name="date"
-                value={formData.date}
-                onChange={handleChange} />
+                <input type="text" name="date" value={formData.date} onChange={handleChange} />
                 <label>Description:</label>
-                <input type="text"
-                name="description"
-                value={formData.description}
-                onChange={handleChange} />
+                <input type="text"name="description" value={formData.description} onChange={handleChange} />
                 <label>Amount:</label>
-                <input type="text"
-                name="amount"
-                value={formData.amount}
-                onChange={handleChange} />
+                <input type="text" name="amount"value={formData.amount} onChange={handleChange} />
                 <label>Category:</label>
-                <input type="text"
-                name="category"
-                value={formData.category}
-                onChange={handleChange} />
+                <input type="text" name="category" value={formData.category} onChange={handleChange} />
                 <button type="submit">Add Transaction</button>
             </form>
             </div>
