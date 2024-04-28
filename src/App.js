@@ -1,7 +1,6 @@
 import React, {  useState } from "react";
 import TransactionTable from "./TransactionTable";
 import TransactionForm from "./TransactionForm";
-import SearchBar from "./SearchBar";
 import './App.css';
 
 function App() {
@@ -11,23 +10,21 @@ function App() {
       { date: '2023-11-06', description: 'Insurance', category: 'Utilities', amount: 6000 },
       { date: '2023-08-02', description: 'Kukito', category: 'Food', amount: 300 }
   ]);
+  const [searchTerm, setSearchTerm] =useState('')
 
   const addTransaction =(newTransaction)=> {
     setTransactions([...transactions, newTransaction]);
   };
 
-  const handleSearch = (searchTerm) => {
-    const filteredTransactions= transactions.filter(transaction=> transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredTransactions= transactions.filter(transaction =>
+  transaction.description.toLowerCase().includes(searchTerm.toLowerCase()));
 
-  return filteredTransactions;
-  }
   return (
     <div className="App">
       <h1>The Royal Bank of Flatiron</h1>
-      <SearchBar handleSearch={handleSearch} />
+      <input type="text" placeholder="Search by description" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <TransactionForm addTransaction={addTransaction} />
-     <TransactionTable transactions={transactions} />
+     <TransactionTable transactions={filteredTransactions} />
      
     </div>
   );
