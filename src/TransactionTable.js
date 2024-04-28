@@ -21,7 +21,6 @@ function TransactionTable({ transactions}){
                             <td>{amount}</td>
                         </tr>
                     ))}
-                 <td></td>
                 </tbody>
             </table>
         </div>

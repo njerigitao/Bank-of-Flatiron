@@ -26,8 +26,7 @@ function TransactionForm({ addTransaction }){
         <div>
             
             <form onSubmit={handleSubmit}>
-
-                <label>Date:</label>
+                <label>Date</label>
                 <input type="text" name="date" value={formData.date} onChange={handleChange} />
                 <label>Description:</label>
                 <input type="text"name="description" value={formData.description} onChange={handleChange} />
